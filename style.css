@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0f172a;
+}
+
+.container {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    background: #1e293b;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.left,
+.fpage {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    gap: 20px;
+    color: white;
+}
+
+.fpage {
+    background: #1e293b;
+    border: 2px solid #38bdf8;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.left input {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+}
+
+.left button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #38bdf8;
+    color: white;
+    cursor: pointer;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0f172a;
+}
+
+.right img {
+    width: 250px;
+    filter: drop-shadow(0 0 25px #0d384b);
+}
+
+.inputBox {
+    position: relative;
+    width: 350px;
+    margin: 20px 0;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #38bdf8;
+    border-radius: 8px;
+    background: transparent;
+    color: white;
+    outline: none;
+}
+
+.inputBox label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.3s;
+    background: #1e293b;
+    padding: 0 5px;
+}
+
+.inputBox input:focus+label,
+.inputBox input:valid+label {
+    top: -1px;
+    font-size: 12px;
+    color: #38bdf8;
+}
+
+.left button:hover {
+    background: #0ea5e9;
+}
+
+.left button:active {
+    background-color: #38bdf8;
+}
+
+.forgot {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+.forgot a {
+    font-size: 14px;
+    color: #38bdf8;
+    text-decoration: none;
+    margin-right: 2px;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
+
+.verify {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -20px;
+    margin-right: 2px;
+}
+
+.verify a {
+    font-size: 14px;
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.verify a:hover {
+    text-decoration: underline;
+}
+
+.loginBtn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #38bdf8;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register {
+    margin-top: 20px;
+    text-align: center;
+    color: #cbd5f5;
+    font-size: 14px;
+}
+
+.register a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
+
+.eye {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+}
+
+.eye:hover {
+    cursor: pointer;
+}
+
+.mail {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .right {
+        background-color: #ffffff00;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        position: absolute;
+        top: 21%;
+        left: 50%;
+        transform:translate(-50%,-50%);
+    }
+
+    .right img {
+        height: auto;
+        width: 200px;
+        filter: drop-shadow(0 0 25px #0d384b);
+        animation: float 4s ease-in-out infinite;
+    }
+
+    .left {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform:translate(-50%,-50%);
+        padding: 30px;
+    }
+
+    .ib label {
+        background-color: #0f172a;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+}
